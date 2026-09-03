@@ -1,0 +1,4 @@
+dist/site/
+dist/*.zip
+.claude/
+.DS_Store

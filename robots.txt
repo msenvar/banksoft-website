@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.banksoft.com.tr/sitemap.xml
