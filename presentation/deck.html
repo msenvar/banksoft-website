@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Banksoft Web Sitesi Yenileme Önerisi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+  @page { size: 508mm 285.75mm; margin: 0; }
+  :root {
+    --red: #CF0D1A; --ink: #101B27; --ink2: #1B2A3A; --slate: #3D5164; --mist: #7B92A8; --line: #D8E0E8; --fog: #EEF2F6;
+    --fd: "Instrument Sans", "Helvetica Neue", Arial, sans-serif; --fb: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #fff; font-family: var(--fb); color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .slide { width: 1920px; height: 1080px; position: relative; overflow: hidden; page-break-after: always; break-after: page; padding: 96px 120px; background: #fff; }
+  .slide:last-child { page-break-after: auto; }
+  .dark { background: var(--ink); color: #F3F6F9; }
+  .fog { background: var(--fog); }
+  h1, h2, h3 { font-family: var(--fd); letter-spacing: -0.02em; line-height: 1.05; margin: 0; font-weight: 600; }
+  h1 { font-size: 92px; letter-spacing: -0.03em; }
+  h2 { font-size: 60px; max-width: 22ch; }
+  h3 { font-size: 30px; }
+  p, li { font-size: 26px; line-height: 1.5; color: var(--slate); margin: 0; }
+  .dark p, .dark li { color: #B7C4D1; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 16px; font-family: var(--fd); font-weight: 600; font-size: 20px; letter-spacing: .14em; text-transform: uppercase; color: var(--slate); margin-bottom: 28px; }
+  .eyebrow::before { content: ""; width: 40px; height: 3px; background: var(--red); }
+  .dark .eyebrow { color: #B7C4D1; }
+  .num { position: absolute; right: 120px; bottom: 56px; font-family: var(--fd); font-size: 18px; color: var(--mist); letter-spacing: .08em; }
+  .foot { position: absolute; left: 120px; bottom: 56px; font-family: var(--fd); font-size: 18px; color: var(--mist); letter-spacing: .04em; }
+  .logo { height: 40px; }
+  ul { padding-left: 0; list-style: none; display: grid; gap: 18px; }
+  li { padding-left: 34px; position: relative; }
+  li::before { content: ""; position: absolute; left: 0; top: 17px; width: 18px; height: 3px; background: var(--red); }
+  .cols { display: grid; gap: 64px; align-items: start; }
+  .c2 { grid-template-columns: 1fr 1fr; }
+  .c12 { grid-template-columns: 5fr 7fr; }
+  .c21 { grid-template-columns: 7fr 5fr; }
+  .frame { border-radius: 14px; overflow: hidden; box-shadow: 0 2px 4px rgba(16,27,39,.08), 0 30px 60px -24px rgba(16,27,39,.35); border: 1px solid var(--line); background: #fff; }
+  .frame img { display: block; width: 100%; }
+  .bar { height: 34px; background: #E9EEF3; border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 8px; padding: 0 14px; }
+  .bar i { width: 11px; height: 11px; border-radius: 50%; background: #C8D1DA; display: block; }
+  .bar span { margin-left: 12px; font-family: var(--fd); font-size: 12px; color: var(--mist); background: #fff; border-radius: 6px; padding: 4px 12px; flex: 1; }
+  .strip { width: 520px; height: 900px; background-repeat: no-repeat; background-size: 520px auto; border-radius: 10px; border: 1px solid var(--line); box-shadow: 0 20px 40px -24px rgba(16,27,39,.3); }
+  .strips { display: flex; gap: 40px; justify-content: space-between; }
+  .kpi { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 56px; }
+  .kpi div { border-top: 3px solid var(--red); padding-top: 18px; }
+  .kpi b { display: block; font-family: var(--fd); font-size: 64px; letter-spacing: -0.03em; line-height: 1; margin-bottom: 8px; }
+  .kpi span { font-size: 22px; color: var(--slate); }
+  .dark .kpi span { color: #B7C4D1; }
+  .swatches { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+  .sw { border-radius: 12px; height: 200px; padding: 20px; display: flex; flex-direction: column; justify-content: flex-end; font-family: var(--fd); border: 1px solid var(--line); }
+  .sw b { font-size: 22px; } .sw span { font-size: 18px; opacity: .8; }
+  .phone { width: 360px; height: 760px; border-radius: 40px; border: 10px solid #1B2A3A; background: #1B2A3A; overflow: hidden; box-shadow: 0 30px 60px -20px rgba(16,27,39,.45); position: relative; }
+  .phone img { width: 100%; display: block; }
+  .phone::after { content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 120px; height: 24px; background: #1B2A3A; border-radius: 0 0 16px 16px; }
+  .cap { font-family: var(--fd); font-size: 20px; color: var(--mist); margin-top: 16px; }
+  .tag { display: inline-block; font-family: var(--fd); font-size: 16px; letter-spacing: .1em; text-transform: uppercase; color: var(--red); border: 1px solid var(--red); border-radius: 4px; padding: 6px 12px; margin-bottom: 20px; }
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 40px; }
+  .step { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 32px; }
+  .step b { display: block; font-family: var(--fd); font-size: 26px; margin-bottom: 8px; }
+  .step small { display: block; font-family: var(--fd); font-size: 16px; letter-spacing: .1em; text-transform: uppercase; color: var(--red); margin-bottom: 14px; }
+  .step p { font-size: 21px; }
+  table { border-collapse: collapse; width: 100%; font-size: 24px; }
+  th, td { text-align: left; padding: 18px 20px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-family: var(--fd); font-size: 18px; letter-spacing: .1em; text-transform: uppercase; color: var(--mist); font-weight: 600; }
+  td:first-child { font-family: var(--fd); font-weight: 600; width: 34%; }
+  .ok { color: #1C7C3E; font-weight: 600; } .todo { color: var(--red); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<!-- 1 · Kapak -->
+<section class="slide dark" style="padding:0">
+  <img src="fold-index.jpg" style="position:absolute;right:0;top:0;height:1080px;width:1040px;object-fit:cover;object-position:left top;opacity:.55;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 40%);mask-image:linear-gradient(90deg,transparent 0%,#000 40%)">
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,#101B27 0%,#101B27 42%,rgba(16,27,39,.2) 100%)"></div>
+  <div style="position:relative;padding:96px 120px;height:100%;display:flex;flex-direction:column;justify-content:space-between">
+    <img class="logo" src="logo-light.svg" alt="Banksoft" style="height:44px;width:auto;align-self:flex-start">
+    <div>
+      <p class="eyebrow">Üst yönetim sunumu · Eylül 2026</p>
+      <h1 style="color:#fff;max-width:12ch">Web sitesi<br>yenileme önerisi</h1>
+      <p style="font-size:30px;max-width:30ch;margin-top:32px;color:#B7C4D1">banksoft.com.tr için sade, güven veren ve mobil uyumlu yeni bir kurumsal site. Tasarım, içerik ve teknik altyapı tamamlandı; test ortamında incelemeye hazır.</p>
+    </div>
+    <p style="font-size:20px;color:#7B92A8">Gizli · Yalnızca Banksoft yönetimi ile paylaşılmak üzere</p>
+  </div>
+</section>
+
+<!-- 2 · Yönetici özeti -->
+<section class="slide">
+  <p class="eyebrow">Yönetici özeti</p>
+  <h2>Banksoft'un ölçeğine yakışan bir dijital vitrin.</h2>
+  <div class="cols c2" style="margin-top:48px">
+    <ul>
+      <li>Mevcut site 2000'lerin başındaki tablo tabanlı tasarımıyla şirketin bugünkü konumunu yansıtmıyor ve mobil cihazlarda okunamıyor.</li>
+      <li>Yeni site, logodaki kırmızı ve gri-mavi renklerden türetilen sade bir tasarım sistemi üzerine kuruldu; kırmızı yalnızca vurgu için kullanılıyor.</li>
+      <li>Tüm içerik mevcut siteden alındı ve yeniden yapılandırıldı: 30'dan fazla ürün altı ailede, 20 tarihli haber, 35+ müşteri, 9 ülke.</li>
+      <li>İngilizce ve Türkçe sürümler, iletişim formu, harita, KVKK metni ve arama motoru altyapısı hazır. Şirketten yalnızca birkaç girdi bekleniyor.</li>
+    </ul>
+    <div>
+      <div class="kpi" style="margin-top:0;grid-template-columns:1fr 1fr">
+        <div><b>7 × 2</b><span>sayfa, iki dilde</span></div>
+        <div><b>30+</b><span>ürün, altı ailede</span></div>
+        <div><b>0</b><span>sunucu bağımlılığı</span></div>
+        <div><b>%100</b><span>mobil uyumlu</span></div>
+      </div>
+      <p style="margin-top:40px;font-size:22px">Test adresi: yönetime ayrıca iletilecek bağlantıdan tüm sayfalar masaüstü ve telefonda incelenebilir.</p>
+    </div>
+  </div>
+  <span class="foot">Banksoft · Web sitesi yenileme önerisi</span><span class="num">02</span>
+</section>
+
+<!-- 3 · Neden yenileme -->
+<section class="slide fog">
+  <p class="eyebrow">Mevcut durum</p>
+  <h2>Neden şimdi yenilenmeli?</h2>
+  <div class="cols c12" style="margin-top:48px">
+    <ul>
+      <li><b>Mobilde kullanılamıyor.</b> 960 piksel sabit genişlik; telefonda yakınlaştırma gerekiyor.</li>
+      <li><b>Güncel değil.</b> Haber sayfasındaki en yeni kayıt Aralık 2014.</li>
+      <li><b>Bulunamıyor.</b> Sayfa adresleri <i>Content.aspx?UstIcerikID=…</i> biçiminde; arama motorları için anlamsız.</li>
+      <li><b>Marka gücünü yansıtmıyor.</b> Türkiye'nin en büyük bankalarına hizmet veren bir şirketin sitesi, küçük bir yazılım evi gibi görünüyor.</li>
+      <li><b>Erişilebilirlik ve güvenlik.</b> Menüler görsel dosyalardan oluşuyor; ekran okuyucular ve yeni tarayıcı standartlarıyla uyumsuz.</li>
+    </ul>
+    <div>
+      <div class="frame"><div class="bar"><i></i><i></i><i></i><span>www.banksoft.com.tr/en/</span></div><img src="old-site.jpg" style="height:380px;object-fit:cover;object-position:top" alt="Mevcut site"></div>
+      <p class="cap">Mevcut ana sayfa, 1440 px genişlikte: içerik ekranın üçte birini dolduruyor.</p>
+    </div>
+  </div>
+  <span class="foot">Banksoft · Web sitesi yenileme önerisi</span><span class="num">03</span>
+</section>
+
+<!-- 4 · Hedefler -->
+<section class="slide">
+  <p class="eyebrow">Tasarım hedefleri</p>
+  <h2>Sade, şık ve güven veren. Bankaların beklediği ciddiyette.</h2>
+  <div class="steps" style="margin-top:56px;grid-template-columns:repeat(4,1fr)">
+    <div class="step" style="background:var(--fog)"><small>01</small><b>Önce içerik</b><p>Rakamlar, ürünler ve referanslar ilk ekranda. Süsleme yok, boş metin yok.</p></div>
+    <div class="step" style="background:var(--fog)"><small>02</small><b>Marka renklerine sadakat</b><p>Logodaki kırmızı yalnızca eylem ve vurgu için; zemin lacivert ve açık gri.</p></div>
+    <div class="step" style="background:var(--fog)"><small>03</small><b>Her cihazda</b><p>Telefon, tablet, masaüstü; açık ve koyu tema; ekran okuyucu uyumu.</p></div>
+    <div class="step" style="background:var(--fog)"><small>04</small><b>Yenilikçi ama ölçülü</b><p>Ana sayfada canlı işlem akışı paneli gibi tek bir ayırt edici öge; gerisi sakin.</p></div>
+  </div>
+  <p style="margin-top:56px;max-width:60ch">Hedef kitle: banka ve ödeme kuruluşlarının teknoloji yöneticileri, iş ortakları ve potansiyel çalışanlar. Site bir satış aracı değil, bir güven belgesi gibi kurgulandı.</p>
+  <span class="foot">Banksoft · Web sitesi yenileme önerisi</span><span class="num">04</span>
+</section>
+
+<!-- 5 · Öncesi / sonrası -->
+<section class="slide fog">
+  <p class="eyebrow">Öncesi ve sonrası</p>
+  <h2>Aynı içerik, yeni duruş.</h2>
+  <div class="cols c2" style="margin-top:44px;gap:48px">
+    <div><span class="tag">Mevcut</span><div class="frame"><div class="bar"><i></i><i></i><i></i><span>banksoft.com.tr/en/</span></div><img src="old-site.jpg" style="height:520px;object-fit:cover;object-position:top" alt=""></div></div>
+    <div><span class="tag" style="color:#1C7C3E;border-color:#1C7C3E">Öneri</span><div class="frame"><div class="bar"><i></i><i></i><i></i><span>banksoft.com.tr</span></div><img src="fold-index.jpg" style="height:520px;object-fit:cover;object-position:top" alt=""></div></div>
+  </div>
+  <span class="foot">Banksoft · Web sitesi yenileme önerisi</span><span class="num">05</span>
+</section>
+
+<!-- 6 · Tasarım sistemi -->
+<section class="slide">
+  <p class="eyebrow">Tasarım sistemi</p>
+  <h2>Logodan türetilen renkler, iki yazı tipi, tek kural seti.</h2>
+  <div class="cols c2" style="margin-top:48px">
+    <div>
+      <div class="swatches">
+        <div class="sw" style="background:#CF0D1A;color:#fff"><b>Banksoft kırmızı</b><span>#CF0D1A · vurgu</span></div>
+        <div class="sw" style="background:#101B27;color:#fff"><b>Lacivert</b><span>#101B27 · zemin</span></div>
+        <div class="sw" style="background:#3D5164;color:#fff"><b>Gri-mavi</b><span>#3D5164 · metin</span></div>
+        <div class="sw" style="background:#7B92A8;color:#fff"><b>Sis</b><span>#7B92A8 · etiket</span></div>
+        <div class="sw" style="background:#EEF2F6;color:#101B27"><b>Açık zemin</b><span>#EEF2F6 · yüzey</span></div>
+      </div>
+      <p style="margin-top:32px;font-size:22px">Kırmızı, sayfa alanının yüzde birinden azında kullanılıyor: düğmeler, kısa çizgi vurguları ve öne çıkan rakamlar. Bu ölçülülük siteye banka müşterilerinin beklediği ağırlığı veriyor.</p>
+    </div>
+    <div>
+      <div style="border:1px solid var(--line);border-radius:14px;padding:36px;background:#fff">
+        <p style="font-family:var(--fd);font-size:18px;letter-spacing:.1em;text-transform:uppercase;color:var(--mist);margin-bottom:16px">Başlık · Instrument Sans</p>
+        <p style="font-family:var(--fd);font-size:54px;font-weight:600;letter-spacing:-.03em;line-height:1.05;color:var(--ink)">75 milyon kartın arkasındaki yazılım.</p>
+        <p style="font-family:var(--fd);font-size:18px;letter-spacing:.1em;text-transform:uppercase;color:var(--mist);margin:36px 0 12px">Metin · Source Sans 3</p>
+        <p style="font-size:24px">Banksoft, bir saniyelik kesintiyi bile göze alamayan bankalar için kart yönetimi, terminal ve switch platformları tasarlar, geliştirir ve işletir.</p>
+        <p style="font-family:var(--fd);font-size:18px;letter-spacing:.1em;text-transform:uppercase;color:var(--mist);margin:36px 0 16px">Logo · vektör olarak yeniden çizildi</p>
+        <img src="logo.svg" style="height:44px;width:auto" alt="Banksoft">
+      </div>
+    </div>
+  </div>
+  <span class="foot">Banksoft · Web sitesi yenileme önerisi</span><span class="num">06</span>
+</section>
+
+<!-- 7 · Ana sayfa hero -->
+<section class="slide dark" style="padding:0">
+  <div style="height:840px;padding:48px 0 0;display:flex;justify-content:center;align-items:flex-start;background:linear-gradient(180deg,#1B2A3A,#101B27)"><div class="frame" style="width:1280px;border-color:rgba(255,255,255,.12)"><div class="bar"><i></i><i></i><i></i><span>banksoft.com.tr</span></div><img src="fold-index.jpg" style="width:1280px;height:766px;object-fit:cover;object-position:top" alt=""></div></div>
+  <div style="position:absolute;left:0;right:0;bottom:0;height:240px;padding:40px 120px;background:#101B27;display:flex;justify-content:space-between;align-items:center;gap:64px">
+    <div><p class="eyebrow" style="margin-bottom:12px">Ana sayfa · ilk ekran</p><p style="font-size:24px;color:#F3F6F9;max-width:80ch">Başlık şirketin en güçlü kanıtını söylüyor: Türkiye'deki 75 milyon kart. Sağdaki panel, bir işlemin POS ve ATM'den Banksoft switch'ine, oradan ihraççıya ve kart şemalarına akışını canlı olarak gösteriyor.</p></div>
+    <span style="font-family:var(--fd);font-size:18px;color:#7B92A8;letter-spacing:.08em;align-self:flex-end">07</span>
+  </div>
+</section>
+
+<!-- 8 · Ana sayfa tam akış -->
+<section class="slide">
+  <p class="eyebrow">Ana sayfa · tam akış</p>
+  <div class="cols" style="grid-template-columns:400px 1fr;gap:56px;margin-top:8px">
+    <div>
+      <h2 style="font-size:44px">Yukarıdan aşağıya bir güven hikâyesi.</h2>
+      <ul style="margin-top:32px;gap:12px">
+        <li style="font-size:21px">Referans bankalar şeridi</li>
+        <li style="font-size:21px">Altı çözüm ailesi</li>
+        <li style="font-size:21px">Üretimdeki rakamlar (25M, 50M, 8M, 1,1M, 12K)</li>
+        <li style="font-size:21px">Üç öne çıkan ürün, fotoğraflı</li>
+        <li style="font-size:21px">Neden Banksoft: dört gerekçe</li>
+        <li style="font-size:21px">Dokuz ülkede kurulum</li>
+        <li style="font-size:21px">Tarihli haberler ve iletişim çağrısı</li>
+      </ul>
+    </div>
+    <div class="strips">
+      <div class="strip" style="background-image:url(full-home-en.jpg);background-position:0 0"></div>
+      <div class="strip" style="background-image:url(full-home-en.jpg);background-position:0 -900px"></div>
+      <div class="strip" style="background-image:url(full-home-en.jpg);background-position:0 -1800px"></div>
+    </div>
+  </div>
+  <span class="foot">Banksoft · Web sitesi yenileme önerisi</span><span class="num">08</span>
+</section>
+
+<!-- 9 · Çözümler -->
+<section class="slide fog">
+  <p class="eyebrow">Çözümler sayfası</p>
+  <div class="cols" style="grid-template-columns:400px 1fr;gap:56px;margin-top:8px">
+    <div>
+      <h2 style="font-size:44px">Otuzdan fazla ürün, altı ailede, tek sayfada.</h2>
+      <p style="margin-top:28px;font-size:22px">Mevcut sitede 35 ayrı alt sayfaya dağılmış ürünler; yeni sitede yapışkan yan menüyle gezilen tek bir sayfa. Her ailenin amiral ürünü kırmızıyla işaretli.</p>
+      <ul style="margin-top:28px;gap:10px">
+        <li style="font-size:21px">Kart yönetimi</li><li style="font-size:21px">Kişiselleştirme</li><li style="font-size:21px">ATM &amp; POS yönetimi</li><li style="font-size:21px">Switch, takas &amp; mutabakat</li><li style="font-size:21px">Sahtecilik, risk &amp; başvuru</li><li style="font-size:21px">Mobil &amp; dijital</li>
+      </ul>
+    </div>
+    <div class="strips">
+      <div class="strip" style="background-image:url(full-solutions-en.jpg);background-position:0 0"></div>
+      <div class="strip" style="background-image:url(full-solutions-en.jpg);background-position:0 -900px"></div>
+      <div class="strip" style="background-image:url(full-solutions-en.jpg);background-position:0 -1800px"></div>
+    </div>
+  </div>
+  <span class="foot">Banksoft · Web sitesi yenileme önerisi</span><span class="num">09</span>
+</section>
+
+<!-- 10 · Kurumsal -->
+<section class="slide">
+  <p class="eyebrow">Kurumsal sayfası</p>
+  <div class="cols" style="grid-template-columns:400px 1fr;gap:56px;margin-top:8px">
+    <div>
+      <h2 style="font-size:44px">Otuz yıl, yedi kilometre taşı, otuz beş kurum.</h2>
+      <p style="margin-top:28px;font-size:22px">Şirket tanıtımı, 1995'ten 2014'e tarihli kilometre taşları, müşteri listesi ve iş ortakları; hepsi mevcut sitedeki gerçek verilerden.</p>
+      <ul style="margin-top:28px;gap:10px">
+        <li style="font-size:21px">2008 Deloitte EMEA Fast 500</li>
+        <li style="font-size:21px">2009 Avrupa'nın ilk EMV ön ödemeli temassız kartı</li>
+        <li style="font-size:21px">2010 PCI SSC'de Türkiye'den ilk üye</li>
+        <li style="font-size:21px">2012 BKM çift mesaj geçişi</li>
+        <li style="font-size:21px">2014 HCE ve ATM'de karttan karta</li>
+      </ul>
+    </div>
+    <div class="strips">
+      <div class="strip" style="background-image:url(full-company-en.jpg);background-position:0 0"></div>
+      <div class="strip" style="background-image:url(full-company-en.jpg);background-position:0 -900px"></div>
+      <div class="strip" style="background-image:url(full-company-en.jpg);background-position:0 -1800px"></div>
+    </div>
+  </div>
+  <span class="foot">Banksoft · Web sitesi yenileme önerisi</span><span class="num">10</span>
+</section>
+
+<!-- 11 · Haberler & Kariyer -->
+<section class="slide fog">
+  <p class="eyebrow">Haberler ve kariyer</p>
+  <h2>Gerçek tarihler, gerçek ilanlar.</h2>
+  <div class="cols c2" style="margin-top:40px;gap:48px">
+    <div><div class="frame"><div class="bar"><i></i><i></i><i></i><span>banksoft.com.tr/news.html</span></div><img src="fold-news.jpg" style="height:460px;object-fit:cover;object-position:top" alt=""></div><p class="cap">Mevcut sitedeki 33 haberden 20'si tarihiyle taşındı (2008–2014). Yayın öncesi güncel haber eklenmeli.</p></div>
+    <div><div class="frame"><div class="bar"><i></i><i></i><i></i><span>banksoft.com.tr/careers.html</span></div><img src="fold-careers.jpg" style="height:460px;object-fit:cover;object-position:top" alt=""></div><p class="cap">Açık pozisyonlar kariyer.net'teki gerçek Banksoft ilanlarına bağlanıyor; genel başvuru için e-posta yolu var.</p></div>
+  </div>
+  <span class="foot">Banksoft · Web sitesi yenileme önerisi</span><span class="num">11</span>
+</section>
+
+<!-- 12 · İletişim -->
+<section class="slide">
+  <p class="eyebrow">İletişim sayfası</p>
+  <div class="cols" style="grid-template-columns:1fr 520px;gap:72px;margin-top:8px">
+    <div>
+      <h2 style="font-size:44px">Form, harita ve yol tarifi tek ekranda.</h2>
+      <ul style="margin-top:32px">
+        <li>Form sunucu gerektirmeden çalışıyor: doldurulmuş e-posta contact@banksoft.com.tr adresine açılıyor. İstenirse bir form servisine tek satırla bağlanıyor.</li>
+        <li>Google Haritalar gömülü; Kısıklı, Aydınoğlu Sokak konumu koordinatla işaretli.</li>
+        <li>D-100 ve TEM yönünden mevcut sitedeki yol tarifleri korundu.</li>
+        <li>KVKK aydınlatma metni, gizlilik politikası ve kullanım koşulları iki dilde eklendi.</li>
+        <li>Bot koruması için gizli alan; kişisel veri yalnızca yanıt amacıyla kullanılıyor.</li>
+      </ul>
+    </div>
+    <div class="strip" style="width:520px;height:800px;background-image:url(full-contact-en.jpg);background-position:0 0;background-size:520px auto"></div>
+  </div>
+  <span class="foot">Banksoft · Web sitesi yenileme önerisi</span><span class="num">12</span>
+</section>
+
+<!-- 13 · Mobil -->
+<section class="slide dark">
+  <p class="eyebrow">Mobil görünüm</p>
+  <div class="cols" style="grid-template-columns:480px 1fr;gap:64px;margin-top:8px">
+    <div>
+      <h2 style="font-size:44px;color:#fff">Telefonda da aynı ciddiyet.</h2>
+      <p style="margin-top:28px;font-size:22px">Tüm sayfalar 390 piksel genişlikte test edildi. Menü tek dokunuşla açılıyor, rakamlar ve ürün kartları tek sütuna iniyor, form ve harita parmakla kullanılabiliyor.</p>
+      <p style="margin-top:20px;font-size:22px">Banka yöneticilerinin siteye ilk kez telefondan bakma olasılığı yüksek; mevcut site bu senaryoda okunamıyor.</p>
+    </div>
+    <div style="display:flex;gap:56px;justify-content:center;align-items:flex-start">
+      <div><div class="phone"><img src="mobile-menu-open.jpg" alt=""></div><p class="cap" style="text-align:center">Açık menü</p></div>
+      <div><div class="phone" style="background:#fff"><img src="mobile-home-en.jpg" style="object-fit:cover;object-position:0 -2350px;height:740px" alt=""></div><p class="cap" style="text-align:center">Ana sayfa, çözümler</p></div>
+      <div><div class="phone" style="background:#fff"><img src="mobile-contact-tr.jpg" style="object-fit:cover;object-position:0 -1700px;height:740px" alt=""></div><p class="cap" style="text-align:center">İletişim, Türkçe</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 14 · İki dil -->
+<section class="slide">
+  <p class="eyebrow">İki dil</p>
+  <h2>Türkçe ve İngilizce, aynı yapı, aynı özen.</h2>
+  <div class="cols c2" style="margin-top:40px;gap:48px">
+    <div><div class="frame"><div class="bar"><i></i><i></i><i></i><span>banksoft.com.tr/tr/</span></div><img src="fold-tr-index.jpg" style="height:470px;object-fit:cover;object-position:top" alt=""></div><p class="cap">Türkçe sürüm /tr/ altında; sağ üstteki EN/TR düğmesi her sayfayı karşılığına bağlıyor.</p></div>
+    <div><div class="frame"><div class="bar"><i></i><i></i><i></i><span>banksoft.com.tr/</span></div><img src="fold-index.jpg" style="height:470px;object-fit:cover;object-position:top" alt=""></div><p class="cap">Arama motorları için her sayfada dil alternatifleri (hreflang) ve iki dilli site haritası tanımlı.</p></div>
+  </div>
+  <span class="foot">Banksoft · Web sitesi yenileme önerisi</span><span class="num">14</span>
+</section>
+
+<!-- 15 · Teknik -->
+<section class="slide fog">
+  <p class="eyebrow">Teknik altyapı</p>
+  <h2>Basit, hızlı ve güvenli: statik site.</h2>
+  <div class="cols c2" style="margin-top:44px">
+    <ul>
+      <li><b>Sunucu bağımlılığı yok.</b> Yalnızca HTML, CSS ve görsel dosyaları; herhangi bir web sunucusuna kopyalanarak yayınlanır. Veritabanı, .NET ya da içerik yönetim sistemi gerektirmez.</li>
+      <li><b>Küçük saldırı yüzeyi.</b> Çalıştırılabilir sunucu kodu olmadığı için güncelleme ve yama yükü yoktur; PCI ortamındaki bir şirket için önemli bir sadeleşme.</li>
+      <li><b>Hızlı.</b> Sayfa başına yaklaşık 30 KB kod; fotoğraflar sıkıştırılmış ve tembel yüklenir.</li>
+      <li><b>Arama motorlarına hazır.</b> Anlamlı adresler, başlık ve açıklama etiketleri, site haritası, Open Graph paylaşım kartları.</li>
+    </ul>
+    <ul>
+      <li><b>Erişilebilir.</b> Klavye ile gezilebilir, ekran okuyucu etiketleri, azaltılmış hareket tercihi, yeterli kontrast.</li>
+      <li><b>Açık ve koyu tema.</b> Ziyaretçinin sistem tercihine göre otomatik.</li>
+      <li><b>Kolay güncelleme.</b> İçerik düz HTML dosyalarında; küçük bir derleme scripti iki dili ve site haritasını üretir.</li>
+      <li><b>Esnek barındırma.</b> Şirket sunucusu, GitHub Pages, Cloudflare veya mevcut hosting; hepsi uygundur.</li>
+    </ul>
+  </div>
+  <span class="foot">Banksoft · Web sitesi yenileme önerisi</span><span class="num">15</span>
+</section>
+
+<!-- 16 · Durum ve beklenen girdiler -->
+<section class="slide">
+  <p class="eyebrow">Durum</p>
+  <h2>Tamamlananlar ve şirketten beklenen girdiler.</h2>
+  <table style="margin-top:40px">
+    <tr><th>Konu</th><th>Durum</th><th>Açıklama</th></tr>
+    <tr><td>Tasarım ve 14 sayfa (EN + TR)</td><td class="ok">Tamamlandı</td><td>Masaüstü ve mobilde test edildi.</td></tr>
+    <tr><td>İçerik aktarımı</td><td class="ok">Tamamlandı</td><td>Ürünler, rakamlar, müşteriler, tarihli haberler, yol tarifi.</td></tr>
+    <tr><td>Form, harita, yasal metinler, SEO</td><td class="ok">Tamamlandı</td><td>Yasal metinler hukuk incelemesi ister.</td></tr>
+    <tr><td>Resmi vektör logo</td><td class="todo">Şirketten</td><td>Logo vektör olarak yeniden çizildi; orijinal dosya varsa değiştirilecek.</td></tr>
+    <tr><td>Fotoğraflar</td><td class="todo">Şirketten</td><td>Şu an lisanslı stok görseller; bina, ofis ve ekip fotoğrafları tercih edilir.</td></tr>
+    <tr><td>Güncel haberler</td><td class="todo">Şirketten</td><td>2014 sonrası gelişmeler için 3–5 kısa haber yeterli.</td></tr>
+    <tr><td>Yayın kararı ve alan adı yönlendirmeleri</td><td class="todo">Şirketten</td><td>Eski Content.aspx adreslerinden yeni sayfalara yönlendirme, BT ile birlikte.</td></tr>
+  </table>
+  <span class="foot">Banksoft · Web sitesi yenileme önerisi</span><span class="num">16</span>
+</section>
+
+<!-- 17 · Sonraki adımlar -->
+<section class="slide fog">
+  <p class="eyebrow">Sonraki adımlar</p>
+  <h2>Üç haftada yayına alınabilir.</h2>
+  <div class="steps">
+    <div class="step"><small>Hafta 1</small><b>İnceleme ve geri bildirim</b><p>Yönetim ve satış ekibi test adresinde siteyi inceler; metin ve öncelik düzeltmeleri toplanır.</p></div>
+    <div class="step"><small>Hafta 2</small><b>Şirket girdileri</b><p>Logo, fotoğraflar, güncel haberler ve yasal onay eklenir; form servisi bağlanır.</p></div>
+    <div class="step"><small>Hafta 3</small><b>Yayın</b><p>BT ile sunucuya kurulum, eski adreslerin yönlendirilmesi, arama motorlarına site haritası bildirimi.</p></div>
+  </div>
+  <p style="margin-top:56px;max-width:64ch">Yayın sonrası bakım yükü düşüktür: yeni bir haber ya da ürün eklemek, tek bir HTML dosyasını düzenleyip derleme scriptini çalıştırmaktan ibarettir.</p>
+  <span class="foot">Banksoft · Web sitesi yenileme önerisi</span><span class="num">17</span>
+</section>
+
+<!-- 18 · Kapanış -->
+<section class="slide dark" style="display:flex;flex-direction:column;justify-content:space-between">
+  <img class="logo" src="logo-light.svg" alt="Banksoft" style="height:44px;width:auto;align-self:flex-start">
+  <div>
+    <p class="eyebrow">Teşekkürler</p>
+    <h2 style="color:#fff;font-size:72px;max-width:16ch">Siteyi test ortamında inceleyin, görüşlerinizi paylaşın.</h2>
+    <p style="margin-top:36px;font-size:26px;max-width:50ch">Test bağlantısı ve bu sunum, geri bildirimlerinizin toplanması için ayrıca iletilecektir. Tüm sayfalar masaüstü ve telefonda incelenebilir.</p>
+  </div>
+  <p style="font-size:20px;color:#7B92A8">Banksoft Bilişim Bilgisayar Hizmetleri A.Ş. · Kısıklı Mah. Aydınoğlu Sok. No: 21, Üsküdar, İstanbul · contact@banksoft.com.tr</p>
+</section>
+
+</body>
+</html>
