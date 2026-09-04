@@ -1,5 +1,7 @@
 # Banksoft — website redesign
 
+**Test site:** https://msenvar.github.io/banksoft-website/ (TR: https://msenvar.github.io/banksoft-website/tr/) — GitHub Pages, published from the `main` branch root. Push to `main` to update.
+
 Static, dependency-free redesign of banksoft.com.tr in English and Turkish.
 Seven pages per language sharing one design system, built from partials with a
 small Python script.
